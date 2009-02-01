@@ -1,0 +1,465 @@
+2008-03-23  Damien Lefortier  <dam@lrde.epita.fr>
+
+	Fix previous patch.
+	* tabu.cc: bug fix.
+
+2008-03-23  Damien Lefortier  <dam@lrde.epita.fr>
+
+	Greedy + tabu.
+	* Makefile.am: Delete old mh.
+	* main.cc: Delete old mh.
+	* mh.cc: Remove.
+	* mh.hh: Remove.
+	* tabu.cc: Add greedy to tabu search.
+
+2008-03-22  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Checks.
+	* bench.sh: New.
+	* check.sh: New.
+
+2008-03-22  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Makefile updated.
+	* Makefile.am: .
+
+2008-03-22  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Makefile updated.
+	* src/post-process/Makefile.am: .
+
+2008-03-22  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Makefile updated.
+	* src/post-process/Makefile.am: .
+
+2008-03-22  Damien Lefortier  <dam@lrde.epita.fr>
+
+	Correct previous patch.
+	* src/core/image.hh,
+	* src/core/image.hxx: Fix copy ctor.
+
+2008-03-22  Damien Lefortier  <dam@lrde.epita.fr>
+
+	Fix copy bug.
+	* src/core/image.hh: Fix assignment operator.
+	* src/core/image.hxx: Delete copy ctor (dummy code !).
+
+2008-03-22  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Tabu with some changes, but always with a bug for high number of filter.
+	* src/core/image.hh: .
+	* src/core/image.hxx: .
+	* src/post-process/main.cc: .
+	* src/post-process/tabu.cc: .
+	* src/post-process/tabu.hh: .
+
+2008-03-21  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Tabu Search.
+	* src/post-process/Makefile.am: .
+	* src/post-process/main.cc: .
+	* src/post-process/tabu.cc: .
+
+2008-03-21  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Some comments, tabu search.
+	* bonus/bonus.cc: .
+	* core/ibc_file.hh: .
+	* core/load_pgm.hh: .
+	* core/load_ppm.hh: .
+	* post-process/main.cc: .
+	* post-process/mh.cc: .
+	* post-process/tabu.cc: New.
+	* post-process/tabu.hh: New.
+	* process/match.hh: .
+	* process/process.hh: .
+
+2008-03-21  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Compilation with the bonus on FreeBSD
+	* configure.ac: .
+	* src/bonus/Makefile.am: .
+
+2008-03-20  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Bonus updated.
+	* src/bonus/Makefile.am: .
+	* src/bonus/bonus.cc: .
+
+2008-03-20  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	A kind of bonus, not working for the moment.
+	* configure.ac: .
+	* src/Makefile.am: .
+	* src/bonus/Makefile.am: New.
+	* src/bonus/bonus.cc: New.
+	* src/bonus: New.
+
+2008-03-19  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	New filter.
+	* src/core/save_pgm.hxx: .
+	* src/post-process/Makefile.am: .
+	* src/post-process/compcon.cc: New.
+	* src/post-process/compcon.hh: New.
+	* src/post-process/main.cc: .
+	* src/post-process/mh.cc: .
+	* src/post-process/mh.hh: .
+
+2008-03-19  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Last changes before dementor
+	* configure.ac: .
+	* src/core/save_pgm.hxx: .
+
+2008-03-19  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	LDFLAGS.
+	* configure.ac: .
+
+2008-03-17  Damien Lefortier  <dam@lrde.epita.fr>
+
+	Add simple mh.
+	* src/core/ibc_file.cc: Up.
+	* src/learn/dir.cc: Up.
+	* src/post-process/mh.cc: Up.
+
+2008-03-17  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Some patchs.
+	* src/core/image.hh: .
+	* src/core/image.hxx: .
+	* src/post-process/filter.cc: .
+	* src/process/best-lambda.cc: .
+	* src/process/process.cc: .
+
+2008-03-16  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Revert best-lambda algorithm. Change std::vector<float> to float[].
+	* Makefile.am: .
+	* configure.ac: -funroll-loops -ffast-math added.
+	* src/process/best-lambda.cc: Revert the best-lambda algorithm.
+	* src/process/process.cc: Change std::vector<float> to float[]
+	for matrix calculations.
+
+2008-03-14  Damien Lefortier  <dam@lrde.epita.fr>
+
+	* src/post-process/mh.cc: New.
+	* src/post-process/mh.hh: New.
+
+2008-03-14  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Temporary best lambda.
+	* src/process/best-lambda.cc: .
+
+2008-03-14  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Patch for save_pgm, is_intruder, best_lambda.
+	* check/load_save.cc: Change the test for PGM ;
+	* src/core/save_pgm.hxx: Patch, no more std::endl after each row ;
+	* src/process/best-lambda.cc: Some improvement. Need a fresh start.
+	* src/process/process.cc: determinant patched, and color to match.
+
+2008-03-14  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Dir with a constant memory implementation.
+	* src/core/ibc_file.cc: .
+	* src/core/ibc_file.hh: .
+	* src/learn/dir.cc: .
+	* src/learn/main.cc: .
+
+2008-03-13  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Hack for dir which process in 36 seconds (PIE).
+	* src/learn/main.cc: .
+
+2008-03-13  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Fix the merge.
+	* src/learn/merge.cc: .
+
+2008-03-13  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	New dir, more optimizied. Now the tarball compile.
+	* check/Makefile.am: .
+	* configure.ac: .
+	* src/Makefile.am: .
+	* src/core/Makefile.am: New.
+	* src/learn/dir.cc: .
+	* src/learn/main.cc: .
+	* src/post-process/Makefile.am: .
+	* src/process/Makefile.am: .
+
+2008-03-13  Damien Lefortier  <lefort_d@epita.fr>
+
+	* TODO: New.
+	* configure.ac: Add flags for PIE.
+
+2008-03-13  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Optimization.
+	* Makefile.am: .
+	* check/view.cc: New.
+	* src/core/ibc_file.cc: .
+	* src/core/image.hh: .
+	* src/core/image.hxx: .
+	* src/core/load_pgm.cc: .
+	* src/core/load_ppm.cc: .
+	* src/core/save_ppm.hxx: .
+	* src/disp/main.cc: .
+	* src/learn/dir.cc: .
+	* src/learn/main.cc: .
+	* src/process/best-lambda.cc: .
+	* src/process/main.cc: .
+	* src/process/match.cc: .
+
+2008-03-12  Damien Lefortier  <dam@lrde.epita.fr>
+
+	foo.
+	* src/core/save_pgm.hxx: Add std-dev computation.
+	* src/disp/main.cc: Up.
+	* src/learn/merge.cc: Fix formula.
+
+2008-03-12  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Load/Save PGM/PPM fixed.
+	* check/load_save.cc: .
+	* src/core/load_pgm.cc: .
+	* src/core/load_ppm.cc: .
+	* src/core/save_pgm.cc: .
+	* src/core/save_pgm.hxx: .
+	* src/core/save_ppm.hxx: .
+
+2008-03-12  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Patch.
+	* best-lambda.cc: .
+	* process.hh: New.
+
+2008-03-12  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Patch.
+	* src/process/best-lambda.cc: New.
+
+2008-03-12  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Patch.
+	* src/process/Makefile.am: .
+	* src/process/main.cc: .
+	* src/process/process.cc: .
+
+2008-03-12  Damien Lefortier  <dam@lrde.epita.fr>
+
+	* src/process/process.cc: s/PPM/PGM in output.
+
+2008-03-11  Damien Lefortier  <dam@lrde.epita.fr>
+
+	foo.
+	* src/process/process.cc: Up formulae.
+
+2008-03-11  Damien Lefortier  <dam@lrde.epita.fr>
+
+	* Makefile.am: Up.
+	* main.cc: Add --process option.
+	* process.cc: New.
+
+2008-03-10  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Internal representation for image change. No more data address.
+	* src/core/image.hh: .
+	* src/core/image.hxx: .
+	* src/learn/dir.cc: .
+	* src/post-process/filter.cc: .
+
+2008-03-10  Damien Lefortier  <dam@lrde.epita.fr>
+
+	* src/learn/create.cc,
+	* src/learn/merge.cc: Update formulae.
+
+2008-03-09  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	process --match added. main for post-process started.
+	* core/save_pgm.cc: .
+	* core/save_pgm.hh: .
+	* core/save_pgm.hxx: New.
+	* disp/Makefile.am: .
+	* post-process/Makefile.am: .
+	* post-process/main.cc: .
+	* process/Makefile.am: .
+	* process/main.cc: .
+	* process/match.cc: New.
+	* process/match.hh: New.
+
+2008-03-09  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Add a pgm loader.
+	* load_pgm.cc: New.
+	* load_pgm.hh: New.
+
+2008-03-09  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Erosion and Dilation added.
+	* check/Makefile.am: .
+	* check/diff.cc: New.
+	* check/erode.cc: New.
+	* src/core/save_ppm.cc: Remove.
+	* src/core/save_ppm.hh: .
+	* src/core/save_ppm.hxx: New.
+	* src/disp/Makefile.am: .
+	* src/post-process/filter.cc: New.
+	* src/post-process/filter.hh: New.
+
+2008-03-08  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Disp std-dev added.
+	* src/core/ibc_file.hh: .
+	* src/core/image.hh: .
+	* src/core/save_pgm.cc: .
+	* src/core/save_pgm.hh: .
+	* src/core/save_ppm.cc: .
+	* src/core/save_ppm.hh: .
+	* src/disp/Makefile.am: .
+	* src/disp/main.cc: .
+
+2008-03-08  Damien Lefortier  <dam@lrde.epita.fr>
+
+	* configure.ac: Add --with-boost-filesystem.
+	* src/learn/create.cc,
+	* src/learn/merge.cc: New formulae.
+
+2008-03-07  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	data_ now use by addresse. configure.ac for boost_filesystem.
+	* configure.ac: .
+	* src/core/image.hh: .
+	* src/core/image.hxx: .
+
+2008-03-07  Damien Lefortier  <dam@lrde.epita.fr>
+
+	Fix previous patch.
+	* dir.cc: New.
+
+2008-03-07  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Bug fixed in ibc_file.cc.
+	* src/core/ibc_file.cc (Ibc_file()): All stream.get replace by ifstream.read.
+
+2008-03-06  Damien Lefortier  <dam@lrde.epita.fr>
+
+	* core/load_ppm.cc,
+	* disp/main.cc,
+	* learn/Makefile.am,
+	* learn/main.cc: Add --dir in learn.
+
+2008-03-06  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Some bugs fixed.
+	* check/ibc_file.cc: .
+	* check/load_save.cc: .
+	* src/core/ibc_file.cc: .
+	* src/core/load_ppm.cc: .
+	* src/core/save_pgm.cc: New.
+	* src/core/save_pgm.hh: New.
+	* src/learn/create.cc: .
+	* src/learn/merge.cc: .
+
+2008-03-06  Damien Lefortier  <dam@lrde.epita.fr>
+
+	* configure.ac: Add -O3.
+	* src/disp/main.cc,
+	* src/learn/create.cc,
+	* src/learn/main.cc: Fix CS.
+
+2008-03-05  Damien Lefortier  <dam@lrde.epita.fr>
+
+	Basic disp command.
+	* src/core/save_ppm.cc: Up.
+	* src/core/save_ppm.hh: Up.
+	* src/disp/Makefile.am: Up.
+	* src/disp/main.cc: Add --mean option.
+
+2008-03-05  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Some fixes for ibc file.
+	* check/ibc_file.cc: .
+	* src/core/ibc_file.cc: .
+	* src/core/ibc_file.hh: .
+	* src/core/image.hh: .
+	* src/core/image.hxx: .
+
+2008-03-05  Damien Lefortier  <dam@lrde.epita.fr>
+
+	Basic learn program with mean.
+	* src/learn/Makefile.am: Up.
+	* src/learn/create.cc: New.
+	* src/learn/main.cc: Add --merge & --learn.
+	* src/learn/merge.cc: New.
+
+2008-03-05  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Add the image impl.
+	* ibc_file.cc: .
+	* image.hxx: New.
+
+2008-03-05  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Prototype for IBC file. To Fix.
+	* check/ibc_file.cc: New.
+	* src/core/ibc_file.cc: New.
+	* src/core/ibc_file.hh: New.
+	* src/core/image.hh: .
+	* src/core/load_ppm.cc: .
+
+2008-03-04  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Parameter the image class.
+	* check/load_save.cc: .
+	* src/core/image.cc: Remove.
+	* src/core/image.hh: .
+	* src/core/load_ppm.cc: .
+	* src/core/load_ppm.hh: .
+	* src/core/save_ppm.cc: .
+	* src/core/save_ppm.hh: .
+
+2008-03-04  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Save/Load images. Some bugs present.
+	* check/load_save.cc: New.
+	* src/core/image.cc: New.
+	* src/core/image.hh: New.
+	* src/core/load_ppm.cc: New.
+	* src/core/load_ppm.hh: New.
+	* src/core/save_ppm.cc: New.
+	* src/core/save_ppm.hh: New.
+
+2008-03-03  Guillaume SADEGH  <guillaume.sadegh@lrde.epita.fr>
+
+	Initial import.
+	* AUTHORS: New.
+	* ChangeLog: New.
+	* Makefile.am: New.
+	* README: New.
+	* bootstrap.sh: New.
+	* check/Makefile.am: New.
+	* check: New.
+	* configure.ac: New.
+	* doc/Doxyfile: New.
+	* doc/Makefile.am: New.
+	* doc: New.
+	* src/Makefile.am: New.
+	* src/core: New.
+	* src/disp/Makefile.am: New.
+	* src/disp/main.cc: New.
+	* src/disp: New.
+	* src/learn/Makefile.am: New.
+	* src/learn/main.cc: New.
+	* src/learn: New.
+	* src/post-process/Makefile.am: New.
+	* src/post-process/main.cc: New.
+	* src/post-process: New.
+	* src/process/Makefile.am: New.
+	* src/process/main.cc: New.
+	* src/process: New.
+	* src: New.
+
